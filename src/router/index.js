@@ -55,6 +55,48 @@ export const constantRoutes = [
     }]
   },
 
+  //css布局学习
+  {
+    path: '/',
+    component: Layout,
+    redirect: '/css',
+    meta: { title: 'flex布局', icon: 'dashboard' },
+    children: [
+      {
+        path: 'integrated-layout',
+        name: 'integratedLayout',
+        component: () => import('@/views/css/Integrated-layout/index'),
+        meta: { title: '综合布局', icon: 'dashboard' }
+      },
+      {
+        path: 'left-right',
+        name: 'leftRight',
+        component: () => import('@/views/css/left-right/index'),
+        meta: { title: '左右布局', icon: 'dashboard' }
+      },
+      {
+        path: 'up-down',
+        name: 'upDown',
+        component: () => import('@/views/css/up-down/index'),
+        meta: { title: '上下布局', icon: 'dashboard' }
+      },
+    ]
+  },
+
+  {
+    path: '/',
+    component: Layout,
+    redirect: '/debug',
+    children: [{
+      path: 'debug',
+      name: 'debug',
+      component: () => import('@/views/debug/index'),
+      meta: { title: '日常调试', icon: 'dashboard' }
+    }]
+  },
+
+
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
