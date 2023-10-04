@@ -57,7 +57,7 @@ export const constantRoutes = [
 
   //css布局学习
   {
-    path: '/',
+    path: '/flex',
     component: Layout,
     redirect: '/css',
     meta: { title: 'flex布局', icon: 'dashboard' },
@@ -84,7 +84,7 @@ export const constantRoutes = [
   },
 
   {
-    path: '/',
+    path: '/debug',
     component: Layout,
     redirect: '/debug',
     children: [{
