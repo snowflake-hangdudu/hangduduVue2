@@ -1,46 +1,67 @@
 <template>
+  <div class="app-container">
+    <div class="search">
+      <div class="search-input">
+        <el-input> </el-input>
+      </div>
+      <!-- <div class="search-input">
+          <el-input></el-input>
+        </div>
+         <div class="search-input">
+          <el-input></el-input>
+        </div> -->
+      <div class="search-select">
+        <el-select></el-select>
+      </div>
+    </div>
     <div class="container">
       <div class="container1">
-        <div class="left-half">姓名
-        </div>
+        <div class="left-half">姓名</div>
         <div class="right-half">
-          <el-input>
-
-          </el-input>
+          <el-input> </el-input>
         </div>
       </div>
       <div class="line"></div>
       <div class="container2">
-        <div class="left-half">姓名
-        </div>
+        <div class="left-half">姓名</div>
         <div class="right-half">
-          <el-input>
-
-          </el-input>
+          <el-input> </el-input>
         </div>
       </div>
-
     </div>
+  </div>
+</template>
 
-  </template>
+<script>
+export default {
+  data() {
+    return {};
+  },
+  methods: {},
+};
+</script>
 
-  <script>
-  export default {
-    data() {
-      return {
+<style lang="scss" scoped>
+.app-container {
+  .search {
+    display: flex;
+    flex-wrap: wrap;
 
-      }
+    .search-input {
+      // flex: none;
+      padding: 10px;
     }
 
+    .search-select {
+      flex: 0 0 500px;
+      padding: 10px;
+    }
   }
-  </script>
 
-  <style scoped lang="scss">
-    .container{
-      display: flex;
+  .container {
+    display: flex;
 
-
-      .container1 {
+    .container1 {
       display: flex;
       width: 50%;
       background-color: aqua;
@@ -52,7 +73,7 @@
         justify-content: flex-end;
         align-items: center;
         background-color: pink;
-        padding-right:10px;
+        padding-right: 10px;
         flex-wrap: nowrap;
       }
 
@@ -61,10 +82,9 @@
         flex-grow: 1;
       }
     }
-    .line{
+    .line {
       border: 1px solid red;
     }
-
 
     .container2 {
       display: flex;
@@ -78,7 +98,7 @@
         justify-content: flex-end;
         align-items: center;
         background-color: pink;
-        padding-right:10px;
+        padding-right: 10px;
         flex-wrap: nowrap;
       }
 
@@ -87,8 +107,6 @@
         flex-grow: 1;
       }
     }
-
-    }
-
-
-  </style>
+  }
+}
+</style>
