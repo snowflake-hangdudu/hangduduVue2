@@ -1,36 +1,39 @@
 <template>
-  <div class="app-container">
-    <div class="header">
-      <input
-        type="text"
-        v-model="name"
-        @keydown="copy($event)"
-        ref="hangdudu"
-      />
-      <Love :name="name" :age="age + 1"></Love>
+  <keep-alive>
+    <div class="app-container">
+      <div class="header">
+        <input
+          type="text"
+          v-model="name"
+          @keydown="copy($event)"
+          ref="hangdudu"
+        />
+        <input
+          type="text"
+          v-model="age"
+          @keydown="copy($event)"
+          ref="hangdudu"
+        />
+      </div>
     </div>
-  </div>
+  </keep-alive>
 </template>
 
 <script>
-import Love from "./love";
 export default {
   data() {
     return {
-      name: "hangdudu",
+      name: "hangdudu2",
       age: 20,
     };
   },
-  components: {
-    Love,
-  },
+  computed: {},
+
   mounted() {},
   methods: {
     copy(e) {
-      let data = new Date();
-      console.log(data.toLocaleString());
-      console.log(this.$refs);
-      console.log(this.$refs.hangdudu);
+      console.log(this.name);
+      console.log(this.age);
     },
   },
 };

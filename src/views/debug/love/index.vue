@@ -2,6 +2,7 @@
   <div>
     {{ name }}
     {{ age }}
+    <el-button @click="pass('sb')">传递信息给父组件</el-button>
   </div>
 </template>
 
@@ -20,6 +21,12 @@ export default {
       type: Number,
       require: true,
       default: 20,
+    },
+  },
+  methods: {
+    pass(p) {
+      console.log(p);
+      this.$emit("listenPass", p);
     },
   },
 };
